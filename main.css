@@ -17,6 +17,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: stretch;
+    margin: 20px;
 }
 .btnContainer {
     text-align: center;
@@ -36,4 +37,22 @@ header {
     color: rgb(255, 255, 255);
     cursor: pointer;
   
+}
+
+.divNoteBox {
+    width: 300px;
+    height: 150px;
+    border: 2px solid gray;
+    margin: 10px;
+    word-break: break-word;
+}
+
+.btnToModal {
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0275d8;
+    color: white;
+    cursor: pointer;
 }

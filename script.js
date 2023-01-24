@@ -10,14 +10,21 @@ notesDiv.style.padding = 5 + 'px';
 
 addNoteBtn.addEventListener('click', () => {
     if (!textArea.value) return;
+    // console.log(textArea.value.length);
+   
     const div = document.createElement('div');
-    div.style.width = 200 + 'px';
-    div.style.height = 100 + 'px';
-    div.style.border = 1 + 'px solid gray';
-    div.style.margin = 10 + 'px';
-    div.style.wordBreak = 'break-word';
+    div.classList.add('divNoteBox');
     div.innerText = textArea.value;
     notesDiv.append(div);
+
+    if (textArea.value.length > 50) {
+
+        const btnToModal = document.createElement('button');
+        btnToModal.innerText = 'See more';
+        btnToModal.classList.add('btnToModal');
+        div.append(btnToModal);
+    }
+
     clearText();
 })
 
