@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
+html {
     min-height: 100vh;
 }
 
@@ -13,3 +13,27 @@ header {
     text-align: center;
 }
 
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.btnContainer {
+    text-align: center;
+    margin: 10px;
+}
+.btnContainer button {
+    padding: .985rem;
+    width: 150px;
+    background-color: rgb(117, 125, 233);
+    border: none;
+    border-radius: 7px;
+    transition: background-color ease-in-out .3s;
+
+}
+.btnContainer button:hover {
+    background-color: rgb(71, 82, 233);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  
+}
