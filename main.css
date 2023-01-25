@@ -33,7 +33,7 @@ header {
 
 .cut-text {
     position: absolute;
-    top: 30px;
+    /* top: 30px; */
     width: 240px;
     white-space: nowrap; 
     overflow: hidden;
@@ -85,10 +85,10 @@ header {
 }
 
 .modal {
+    background-color: rgba(18, 17, 17, 0.1); 
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .6);
     z-index: 1; 
     width: 100%; 
     height: 100%; 
@@ -97,8 +97,8 @@ header {
 }
 
 .modalContent {
-    width: 300px;
-    height: 100px;
+    width: 400px;
+    height: 200px;
     border: 2px solid blue;
     margin: 15rem auto;
     padding: 20px 15px;

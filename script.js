@@ -23,19 +23,20 @@ addNoteBtn.addEventListener('click', () => {
         btnToModal.innerText = 'See more...';
         btnToModal.classList.add('btnToModal');
         divBox.append(btnToModal);
-
-
-
+    
     }
-
+    btnToModal.addEventListener('click', seeMoreBtn);
     clearText();
 })
+
+
 
 const clearText = () => {
     textArea.value = '';
 }
 
 const seeMoreBtn = () => {
+    console.log(notesDiv);
     const divModal = document.createElement('div');
     divModal.classList.add('modal');
 
@@ -48,5 +49,5 @@ const seeMoreBtn = () => {
    
     modalBox.append(p);
     divModal.append(modalBox);
+   document.body.appendChild(divModal);
 }
-seeMoreBtn()
