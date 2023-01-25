@@ -16,13 +16,16 @@ addNoteBtn.addEventListener('click', () => {
     divBox.append(para);
     notesDiv.append(divBox);
 
+    const btnToModal = document.createElement('button');
     if (textArea.value.length > 25) {
-        const btnToModal = document.createElement('button');
+        para.classList.add('cut-text');
+
         btnToModal.innerText = 'See more...';
         btnToModal.classList.add('btnToModal');
         divBox.append(btnToModal);
 
-        para.classList.add('cut-text');
+
+
     }
 
     clearText();
@@ -33,11 +36,17 @@ const clearText = () => {
 }
 
 const seeMoreBtn = () => {
-    let body = document.body;
-    const modalBox = document.createElement('div');
+    const divModal = document.createElement('div');
+    divModal.classList.add('modal');
 
-    body.classList.add('modal');
+    const modalBox = document.createElement('div');
     modalBox.classList.add('modalContent');
-    modalBox.append(textArea.value);
+    
+    const p = document.createElement('p');
+    p.innerText = textArea.value;
+
+   
+    modalBox.append(p);
+    divModal.append(modalBox);
 }
-// seeMoreBtn()
+seeMoreBtn()
