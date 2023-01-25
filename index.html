@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <script defer src="./script.js"></script>
     <title>Note Taker</title>
 </head>
 <body>
-    <header class="heading">
+    <header>
         <h1 class="headingMain">Note Taker</h1>
     </header>
     <main class="mainContainer" id="mainCont">
@@ -20,15 +23,12 @@
                 </button>
             </div>
             <div id="textAreaDiv">
-                <textarea id="textAreaID" name="notes" id="noteArea" cols="80" rows="10" placeholder="Type notes here..."></textarea>
+                <textarea id="textAreaID" name="notes" id="noteArea" cols="60" rows="10" placeholder="Type notes here..."></textarea>
             </div>
         </section>
     </main>
-    <hr>
     <section>
-        <div class="notesDiv" id="notesDiv">
-
-        </div>
-       </section>
+        <div class="notesDiv" id="notesDiv"></div>
+    </section>
 </body>
 </html>
