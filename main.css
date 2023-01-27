@@ -85,7 +85,7 @@ header {
 }
 
 .modal {
-    background-color: rgba(18, 17, 17, 0.1); 
+    background-color: rgba(18, 17, 17, 0.7); 
     position: fixed;
     top: 0;
     left: 0;
@@ -99,8 +99,10 @@ header {
 .modalContent {
     width: 400px;
     height: 200px;
-    border: 2px solid blue;
+    background-color: lightgray;
+    border-radius: 5px;
+    border: 2px solid gray;
     margin: 15rem auto;
     padding: 20px 15px;
-
+    position: relative;
 }
