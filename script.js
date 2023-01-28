@@ -3,12 +3,12 @@ const addNoteBtn = document.getElementById('addNoteButton');
 
 const notesDiv = document.getElementById('notesDiv')
 
-const para = document.createElement('p');
+
 addNoteBtn.addEventListener('click', () => {
     if (!textArea.value) return;
 
     const divBox = document.createElement('div');
-  
+    const para = document.createElement('p');
 
     divBox.classList.add('divNoteBox');
     para.innerText = textArea.value;
@@ -36,28 +36,17 @@ const clearText = () => {
 }
 
 const seeMoreBtn = () => {
-    console.log(notesDiv);
-    const divModal = document.createElement('div');
+    const modal = document.getElementById('modal');
+    const closeX = document.querySelector('.close-modal');
+    modal.style.display = 'block';
     
-    divModal.classList.add('modal');
-
-    const modalBox = document.createElement('div');
-    const buttonX = document.createElement('button');
-    buttonX.innerText = 'X';
-    buttonX.style.position = 'absolute';
-    buttonX.style.top = '5px';
-    buttonX.style.right = '5px';
-    buttonX.addEventListener('click', () => {
-        divModal.style.display = 'none';
+    closeX.addEventListener('click', () => {
+        modal.style.display = 'none';
     })
-    modalBox.classList.add('modalContent');
-    
-    const p = document.createElement('p');
-    p.innerText = para.innerText; // NEEDS TO BE P TAG VALUE IN DIVBOX
-    
-    modalBox.append(buttonX, p);
 
-    divModal.append(modalBox);
-    document.body.appendChild(divModal);
+    // window.onclick(function () {
+    //     modal.style.display = 'none';
+    // })
+    
 }
 
