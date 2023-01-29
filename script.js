@@ -3,13 +3,13 @@ const addNoteBtn = document.getElementById('addNoteButton');
 
 const notesDiv = document.getElementById('notesDiv')
 
-const para = document.createElement('p');
+
 addNoteBtn.addEventListener('click', () => {
     if (!textArea.value) return;
 
     const divBox = document.createElement('div');
-   
-
+    const para = document.createElement('p');
+    para.style.wordBreak = 'breakAll';
     divBox.classList.add('divNoteBox');
     para.innerText = textArea.value;
     
@@ -25,17 +25,16 @@ addNoteBtn.addEventListener('click', () => {
         divBox.append(btnToModal);
     
     }
-    btnToModal.addEventListener('click', seeMoreBtn);
+    btnToModal.addEventListener('click', seeMoreBtn.bind(null, para));
     clearText();
 })
-
 
 
 const clearText = () => {
     textArea.value = '';
 }
 
-const seeMoreBtn = () => {
+const seeMoreBtn = (para) => {
     const modal = document.getElementById('modal');
     modal.style.display = 'block';
 
