@@ -43,13 +43,17 @@ const seeMoreBtn = (para) => {
     const modalContent = document.getElementById('modalContent');
     
     const noteText = document.getElementById('notesModal');
+    noteText.style.display = 'block';
+    noteText.style.margin = '5px';
     noteText.innerText = para.innerText;
 
     modalContent.append(noteText);
     closeX.addEventListener('click', () => {
         modal.style.display = 'none';
     })
-
+    // window.addEventListener('click', () => {
+    //     modal.style.display = 'none';
+    // })
   
 }
 
