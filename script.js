@@ -6,15 +6,18 @@ const emptyNote = document.getElementById('emptyNoteReminder');
 emptyNote.style.display = 'none';
 
 addNoteBtn.addEventListener('click', () => {
+   
     if (!textArea.value)  {
         emptyNote.style.color = 'red';
         emptyNote.style.display = 'block';
         textArea.style.border = '1px solid red';
         return;
        
-    }
+    } 
     
-    
+    emptyNote.style.display = 'none';
+    textArea.style.border = '1px solid black';
+
     const divBox = document.createElement('div');
     const para = document.createElement('p');
     para.style.wordBreak = 'breakAll';
