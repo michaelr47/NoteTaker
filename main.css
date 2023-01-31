@@ -115,3 +115,18 @@ header {
     margin: 5px;
     width: 15px;
 }
+
+@keyframes shake {
+    0% {
+        margin: 0rem;
+    }
+    25% {
+        margin-left: 3rem;
+    }
+    50% {
+        margin-right: -3rem;
+    }
+    100% {
+        margin: 0rem;
+    }
+}
