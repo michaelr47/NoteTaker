@@ -2,11 +2,19 @@ const textArea = document.getElementById('textAreaID');
 const addNoteBtn = document.getElementById('addNoteButton');
 
 const notesDiv = document.getElementById('notesDiv')
-
+const emptyNote = document.getElementById('emptyNoteReminder');
+emptyNote.style.display = 'none';
 
 addNoteBtn.addEventListener('click', () => {
-    if (!textArea.value) return;
-
+    if (!textArea.value)  {
+        emptyNote.style.color = 'red';
+        emptyNote.style.display = 'block';
+        textArea.style.border = '1px solid red';
+        return;
+       
+    }
+    
+    
     const divBox = document.createElement('div');
     const para = document.createElement('p');
     para.style.wordBreak = 'breakAll';
