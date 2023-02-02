@@ -11,16 +11,8 @@ addNoteBtn.addEventListener('click', () => {
         emptyNote.style.color = 'red';
         emptyNote.style.display = 'block';
         textArea.style.border = '1px solid red';
-        textArea.style.animate([
-            // keyframes
-            { transform: 'translateY(0px)' },
-            { transform: 'translateY(-300px)' }
-          ], {
-            // timing options
-            duration: 2000,
-            iterations: Infinity
-          });
-        return;
+        textArea.style.animation = 'shake .4s 0s ease';
+        return; 
       
     } 
     

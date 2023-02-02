@@ -121,12 +121,12 @@ header {
         margin: 0rem;
     }
     25% {
-        margin-left: 3rem;
+        margin-right: 1rem;
     }
     50% {
-        margin-right: -3rem;
+        margin-right: -2rem;
     }
     100% {
-        margin: 0rem;
+        margin-right: 0rem;
     }
 }
