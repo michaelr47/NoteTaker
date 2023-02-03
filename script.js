@@ -5,8 +5,10 @@ const notesDiv = document.getElementById('notesDiv')
 const emptyNote = document.getElementById('emptyNoteReminder');
 emptyNote.style.display = 'none';
 
+let noteCounter = document.getElementById('noteCounter');
+let countIncr = 0;
 addNoteBtn.addEventListener('click', () => {
-   
+  
     if (!textArea.value)  {
         emptyNote.style.color = 'red';
         emptyNote.style.display = 'block';
@@ -15,7 +17,7 @@ addNoteBtn.addEventListener('click', () => {
         return; 
       
     } 
-    
+   
     emptyNote.style.display = 'none';
     textArea.style.border = '1px solid black';
 
@@ -32,11 +34,13 @@ addNoteBtn.addEventListener('click', () => {
     btnToModal.innerText = 'See more...';
     btnToModal.classList.add('btnToModal');
     divBox.append(btnToModal);
-    
+
     if (textArea.value.length > 25) {
         para.classList.add('cut-text');
     }
     btnToModal.addEventListener('click', seeMoreBtn.bind(null, para));
+    countIncr++;
+    noteCounter.innerText = countIncr;
     clearText();
 })
 
