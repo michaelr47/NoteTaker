@@ -29,13 +29,12 @@ addNoteBtn.addEventListener('click', () => {
     notesDiv.append(divBox);
 
     const btnToModal = document.createElement('button');
+    btnToModal.innerText = 'See more...';
+    btnToModal.classList.add('btnToModal');
+    divBox.append(btnToModal);
+    
     if (textArea.value.length > 25) {
         para.classList.add('cut-text');
-
-        btnToModal.innerText = 'See more...';
-        btnToModal.classList.add('btnToModal');
-        divBox.append(btnToModal);
-    
     }
     btnToModal.addEventListener('click', seeMoreBtn.bind(null, para));
     clearText();
