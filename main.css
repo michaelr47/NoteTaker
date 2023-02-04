@@ -132,3 +132,7 @@ header {
         margin-right: 0rem;
     }
 }
+
+.error::placeholder {
+    color: red;
+}

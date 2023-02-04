@@ -2,16 +2,13 @@ const textArea = document.getElementById('textAreaID');
 const addNoteBtn = document.getElementById('addNoteButton');
 
 const notesDiv = document.getElementById('notesDiv')
-const emptyNote = document.getElementById('emptyNoteReminder');
-emptyNote.style.display = 'none';
 
 let noteCounter = document.getElementById('noteCounter');
 let countIncr = 0;
 addNoteBtn.addEventListener('click', () => {
   
     if (!textArea.value)  {
-        emptyNote.style.color = 'red';
-        emptyNote.style.display = 'block';
+        textArea.classList.add('error');
         textArea.style.border = '1px solid red';
         textArea.style.animation = 'shake .4s 0s ease';
         return; 
