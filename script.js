@@ -14,8 +14,7 @@ addNoteBtn.addEventListener('click', () => {
         return; 
       
     } 
-   
-    emptyNote.style.display = 'none';
+    textArea.classList.remove('error')
     textArea.style.border = '1px solid black';
 
     const divBox = document.createElement('div');
@@ -39,6 +38,7 @@ addNoteBtn.addEventListener('click', () => {
     countIncr++;
     noteCounter.innerText = countIncr;
     clearText();
+
 })
 
 
