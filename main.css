@@ -136,3 +136,17 @@ header {
 .error::placeholder {
     color: red;
 }
+
+.delete {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 40px;
+    height: 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: #c43535;
+    color: white;
+    cursor: pointer;
+}

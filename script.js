@@ -30,6 +30,10 @@ addNoteBtn.addEventListener('click', () => {
     btnToModal.innerText = 'See more...';
     btnToModal.classList.add('btnToModal');
     divBox.append(btnToModal);
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'delete';
+    deleteButton.classList.add('delete');
+    divBox.append(deleteButton);
 
     if (textArea.value.length > 25) {
         para.classList.add('cut-text');
