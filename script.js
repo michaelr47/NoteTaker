@@ -36,9 +36,7 @@ addNoteBtn.addEventListener('click', () => {
     deleteButton.classList.add('delete');
     divBox.append(deleteButton);
 
-    deleteButton.addEventListener('click', () => {
-        divBox.remove();
-    })
+    deleteButton.addEventListener('click', () => divBox.remove());
     
     if (textArea.value.length > 25) {
         para.classList.add('cut-text');
